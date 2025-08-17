@@ -1,0 +1,30 @@
+# Toggle rules and tune thresholds here
+failed_console_login_burst:
+  enabled: true
+  # Number of failed logins from the same source IP within the lookback window
+  threshold: 5
+
+root_user_activity:
+  enabled: true
+
+iam_sensitive_changes:
+  enabled: true
+  # List of IAM events to flag
+  events:
+    - CreateUser
+    - DeleteUser
+    - AttachUserPolicy
+    - PutUserPolicy
+    - CreateAccessKey
+    - UpdateAssumeRolePolicy
+    - CreatePolicy
+    - AttachRolePolicy
+    - PutRolePolicy
+
+console_login_without_mfa:
+  enabled: true
+
+geoip_allowlist:
+  enabled: false
+  # Only used in offline demo or if you enrich logs with geoip data
+  countries: ["IN"]

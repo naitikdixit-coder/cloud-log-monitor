@@ -1,0 +1,6 @@
+# Optional configuration (allowlists, notify endpoints, etc.)
+ip_allowlist: []
+mfa_exempt_users: []  # e.g., ["break-glass-admin"]
+notify:
+  enabled: false
+  webhook_url: ""
